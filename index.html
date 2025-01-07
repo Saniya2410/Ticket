@@ -1,152 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ticket </title>
-    <style> 
-.ticket-container{
-    background-color: darkslategray;
-    width:900px;
-    height:400px;
-    margin:50px auto;
-    /* border-radius:10px; */
-    display:flex;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image:url('event1.png');
-    background-size: cover;
-
-}
-.main-page{
-    
-    width:70%;
-    border-radius:5px;
-    box-shadow:0 0 10px  5px rgba(56, 55, 55, 0.5);
-    border-right:dashed;
-     padding-left:20px;
-     font-size:25px;
-}
-.event-part{
-    background-color:rgba(165, 42, 42, 0.945);
-    width:30%;
-    border-radius:5px;
-    box-shadow:0 0 10px  5px rgb( 0 ,0, 0, 0.5);
-    /* border:2px solid black; */
-    border-left:none;
-    padding-left:5px;
-    font-size:13px;
-    font-weight:90px;
-}
- .event-img{ 
-     width: 100%;
-    /* height:400px; */
-
- }
- .icon{
-    height:80px;
-    width:70px;
-     padding-top :5px; 
- }
- .data{
-    color:blanchedalmond;
-    font-size:30px;
-    padding:20px;
- }
- #page{
-    font-size: 50px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
- }
-
- /* mobile */
-@media (max-width:600px)
-{
-.ticket-container{
-    flex-direction:column;
-    align-items: center;
-    height:auto;
-    width:auto;
-}
-    .main-page{
-        width:50%;
-        border-right: solid;
-        border-bottom: none;
-    
-    }
-    .event-part{
-        width:50%;
-        border-top:dashed;
-        border-left:solid;
-    
-    }
-
-}
-
-/* tab */
-@media (min-width:601px)and(max-width:800px){
-
-.ticket-container{
-flex-direction:column;
-align-items: center;
-height:auto;
-width:auto;
-}
-
-.main-page{
-    width: 300px;;
-    border-right: solid;
-    border-bottom: none;
-}
-.event-part{
-    width:600px;
-    border-top:dashed;
-    border-left:solid;
-    }
-    
-    
-
-}
-
-/* laptop */
-@media ( min-width:801px) and (max-width:1024px){
-    
-    
-    .main-page{
-            width: 500px;;
-    
+    <title>Responsive Event Ticket</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .event-part{
-            width:500px;
-            
+
+        .ticket-container {
+            display: flex;
+            flex-direction: row;
+            background-color: darkslategray;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 10px 5px rgba(56, 55, 55, 0.5);
+            overflow: hidden;
         }
-    }
-        
-        
+
+        .main-page, .event-part {
+            padding: 20px;
+        }
+
+        .main-page {
+            flex: 2;
+            background: url('event1.png') no-repeat center center/cover;
+            color: blanchedalmond;
+            font-size: 18px;
+            border-right: dashed 2px #fff;
+        }
+
+        .main-page h1 {
+            font-size: 40px;
+        }
+
+        .event-part {
+            flex: 1;
+            background-color: rgba(165, 42, 42, 0.945);
+            color: blanchedalmond;
+            text-align: center;
+        }
+
+        .event-part img.icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .event-part img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .event-part h1 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #fff;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            .ticket-container {
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .main-page, .event-part {
+                width: 100%;
+                border-right: none;
+                border-bottom: dashed 2px #fff;
+            }
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .ticket-container {
+                flex-direction: row;
+                margin: 10px;
+            }
+
+            .main-page, .event-part {
+                width: 100%;
+                border-right: none;
+                border-bottom: dashed 2px #fff;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="ticket-container">
-        <div class="main-page"> 
-            <h1 id="page"> EVENT TICKET </h1>
-            <P> ALL NIGHT PARTY EVENT </P>
-        <h4> ON: 02-01-2025 </h4>
-            <h5> TIME: 5PM </h5>
-            <br>
-            HAPPY NEW YEAR 
-         <!-- <img src="event1.png" class="event-img" alt="pic">  -->
-         
+        <div class="main-page">
+            <h1>EVENT TICKET</h1>
+            <p>ALL NIGHT PARTY EVENT</p>
+            <h4>ON: 02-01-2025</h4>
+            <h5>TIME: 5 PM</h5>
+            <p>HAPPY NEW YEAR!</p>
         </div>
         <div class="event-part">
             <img src="university.jpg" class="icon" alt="logo">
-            <img src="friends.png" >
-            <h1 class="data"><b> EVENT TICKET</b></h1>
-            <h2> ALL NIGHT PARTY EVENT </h2>
-            <p> VENUE: AT COLLEGE AUDITORIUM <p>
-            <P> PRICE:1000/-</P>
+            <img src="friends.png" alt="event">
+            <h1><b>EVENT TICKET</b></h1>
+            <h2>ALL NIGHT PARTY EVENT</h2>
+            <p>VENUE: AT COLLEGE AUDITORIUM</p>
+            <p>PRICE: 1000/-</p>
             <hr>
-            <h3>ID: 151906 </h3>
-
-
+            <h3>ID: 151906</h3>
         </div>
     </div>
 </body>
